@@ -1,0 +1,11 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          validatorsDefinition:
+            JhCaptchaRecaptcha:
+              implementationClassName: Haffner\JhCaptcha\Validation\Validator\ReCaptchaValidator
+              formEditor:
+                iconIdentifier: form-validator
+                label: formEditor.elements.JhCaptchaRecaptcha.label

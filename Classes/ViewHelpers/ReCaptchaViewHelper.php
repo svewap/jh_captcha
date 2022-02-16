@@ -49,16 +49,14 @@ class ReCaptchaViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractView
             // render v2
             if ($settings['reCaptcha']['v2']['siteKey']) {
                 return $this->renderV2($captchaResponseId, $settings);
-            } else {
-                return LocalizationUtility::translate('setApiKey', 'jh_captcha');
             }
+            return LocalizationUtility::translate('setApiKey', 'jh_captcha');
         } else {
             // render v3
             if ($settings['reCaptcha']['v3']['siteKey']) {
                 return $this->renderV3($captchaResponseId, $settings);
-            } else {
-                return LocalizationUtility::translate('setApiKey', 'jh_captcha');
             }
+            return LocalizationUtility::translate('setApiKey', 'jh_captcha');
         }
     }
 

@@ -1,28 +1,14 @@
+imports:
+  - { resource: "./Validator/JhCaptchaRecaptcha.yaml" }
+  - { resource: "./FormElement/JhCaptchaRecaptcha.yaml" }
+
 TYPO3:
   CMS:
     Form:
       prototypes:
         standard:
-          formEditor:
-            formEditorPartials:
-              FormElement-JhCaptchaRecaptcha: 'Stage/SimpleTemplate'
-
           formElementsDefinition:
             Form:
               renderingOptions:
                 partialRootPaths:
                   JhCaptchaRecaptcha: 'EXT:jh_captcha/Resources/Private/Form/Frontend/Partials'
-            JhCaptchaRecaptcha:
-              __inheritances:
-                10: 'TYPO3.CMS.Form.mixins.formElementMixins.JhCaptchaRecaptchaMixin'
-              renderingOptions:
-                _isHiddenFormElement: true
-                enabled: false
-          validatorsDefinition:
-            JhCaptchaRecaptcha:
-              implementationClassName: 'Haffner\JhCaptcha\Validation\Validator\ReCaptchaValidator'
-      mixins:
-        formElementMixins:
-          JhCaptchaRecaptchaMixin:
-            __inheritances:
-              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
