@@ -93,6 +93,12 @@ TYPO3:
               validators:
                 -
                   identifier: JhCaptchaRecaptcha
+              variants:
+                -
+                  identifier: hide-1
+                  renderingOptions:
+                    enabled: false
+                  condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver"]'
           formEditor:
             formEditorPartials:
               FormElement-JhCaptchaRecaptcha: 'Stage/SimpleTemplate'
